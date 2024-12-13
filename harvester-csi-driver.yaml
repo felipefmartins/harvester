@@ -178,9 +178,13 @@ spec:
                 - SYS_ADMIN
             privileged: true
           volumeMounts:
+            # - name: cloud-config
+            #   readOnly: true
+            #   mountPath: /var/lib/harvester
             - name: cloud-config
-              readOnly: true
-              mountPath: /var/lib/harvester
+              mountPath: /var/lib/harvester/cloud-provider-config
+              subPath: cloud-config
+              readOnly: true              
             - name: kubernetes
               readOnly: true
               mountPath: /etc/kubernetes
@@ -222,9 +226,12 @@ spec:
           value: linux
       volumes:
         - name: cloud-config
-          hostPath:
-            path: /var/lib/rancher/rke2/etc/config-files/
-            type: DirectoryOrCreate
+          secret:
+            secretName: harvester-cloud-config         
+        # - name: cloud-config
+        #   hostPath:
+        #     path: /var/lib/rancher/rke2/etc/config-files/
+        #     type: DirectoryOrCreate
         - hostPath:
             path: /etc/kubernetes
             type: DirectoryOrCreate
@@ -344,7 +351,7 @@ spec:
           name: csi-attacher
           volumeMounts:
             - mountPath: /csi/
-              name: socket-dir
+              name: socket-dir             
       serviceAccountName: harvester-csi-driver
       nodeSelector:
         kubernetes.io/os: linux
@@ -366,7 +373,7 @@ spec:
         - hostPath:
             path: /var/lib/kubelet/harvester-plugins/driver.harvesterhci.io
             type: DirectoryOrCreate
-          name: socket-dir
+          name: socket-dir      
 ---
 # Source: harvester-csi-driver/templates/csidriver.yaml
 apiVersion: storage.k8s.io/v1

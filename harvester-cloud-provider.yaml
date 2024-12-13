@@ -1,4 +1,14 @@
 ---
+# Secret: Harvester cloud-config
+apiVersion: v1
+kind: Secret
+metadata:
+  name: harvester-cloud-config
+  namespace: kube-system
+data:
+  cloud-config: >-
+    YXBpVmVyc2lvbjogdjEKY2x1c3RlcnM6Ci0gY2x1c3RlcjoKICAgIGNlcnRpZmljYXRlLWF1dGhvcml0eS1kYXRhOiBMUzB0TFMxQ1JVZEpUaUJEUlZKVVNVWkpRMEZVUlMwdExTMHRDazFKU1VKbFJFTkRRVklyWjBGM1NVSkJaMGxDUVVSQlMwSm5aM0ZvYTJwUFVGRlJSRUZxUVd0TlUwbDNTVUZaUkZaUlVVUkVRbXg1WVRKVmVVeFlUbXdLWTI1YWJHTnBNV3BaVlVGNFRucEJlazVxUlhsT1ZHYzFUVUkwV0VSVVNYcE5WRWw1VG1wRk0wNUVUWGRQVm05WVJGUk5lazFVU1hsTmVrVXpUa1JOZHdwUFZtOTNTa1JGYVUxRFFVZEJNVlZGUVhkM1dtTnRkR3hOYVRGNldsaEtNbHBZU1hSWk1rWkJUVlJqZDAxNldYaE5hbFUwVDFSQ1drMUNUVWRDZVhGSENsTk5ORGxCWjBWSFEwTnhSMU5OTkRsQmQwVklRVEJKUVVKRk9FVkxlamxRTW0wM05XSkZZelJ5YUc4MFprNXBTM0I2TkdkTFIxWktaMngxYzNBNVIzY0tObWRKVERsQk5UTm9hWEJxT0hOaE0waGlXRk5KZVVoU1pqUjFlbEJSZDBneVVWbHRPVlJWVmxSSVJGbGpReXRxVVdwQ1FVMUJORWRCTVZWa1JIZEZRZ292ZDFGRlFYZEpRM0JFUVZCQ1owNVdTRkpOUWtGbU9FVkNWRUZFUVZGSUwwMUNNRWRCTVZWa1JHZFJWMEpDVWpBelVrbFVTamh6Vm1STldVWlNSME5GQ214VmVtRjJWWEUzWjJwQlMwSm5aM0ZvYTJwUFVGRlJSRUZuVGtoQlJFSkZRV2xCWkRGcGEzVTRkVnB0TTA5WWVXSTJTR3RpUjJ0dVlrNU5RbTQzVW1ZS2NqbHpkRFU1UWt0SGRrTXJaVUZKWjFNdmQyUTBaV3RoY0hGUk1GaEJlV2RtWld4UFIwdENNSEIwYkc1eFJVRnJja2RtTWxWMFdXOXhVRWs5Q2kwdExTMHRSVTVFSUVORlVsUkpSa2xEUVZSRkxTMHRMUzBLCiAgICBzZXJ2ZXI6IGh0dHBzOi8vMTcyLjE2Ljg4LjExOjY0NDMKICBuYW1lOiBkZWZhdWx0CmNvbnRleHRzOgotIGNvbnRleHQ6CiAgICBjbHVzdGVyOiBkZWZhdWx0CiAgICBuYW1lc3BhY2U6IHRvb2xzCiAgICB1c2VyOiBzYS10b29scy10b29scy1kZWZhdWx0CiAgbmFtZTogc2EtdG9vbHMtdG9vbHMtZGVmYXVsdApjdXJyZW50LWNvbnRleHQ6IHNhLXRvb2xzLXRvb2xzLWRlZmF1bHQKa2luZDogQ29uZmlnCnByZWZlcmVuY2VzOiB7fQp1c2VyczoKLSBuYW1lOiBzYS10b29scy10b29scy1kZWZhdWx0CiAgdXNlcjoKICAgIHRva2VuOiBleUpoYkdjaU9pSlNVekkxTmlJc0ltdHBaQ0k2SWtRMlZsZENiekIxYkY5elNqVXpTMlpwTW1wQ1RYaGpNblJHWm1OWFRGbzFjV1V0ZFdkV04yNXZUMEVpZlEuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSjBiMjlzY3lJc0ltdDFZbVZ5Ym1WMFpYTXVhVzh2YzJWeWRtbGpaV0ZqWTI5MWJuUXZjMlZqY21WMExtNWhiV1VpT2lKellTMTBiMjlzY3kxMGIydGxiaUlzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVnlkbWxqWlMxaFkyTnZkVzUwTG01aGJXVWlPaUp6WVMxMGIyOXNjeUlzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVnlkbWxqWlMxaFkyTnZkVzUwTG5WcFpDSTZJall5WmpSbFpUazRMV013TmpBdE5EVTJPUzFoWlRRMExUWXpaVEExTVdJd05HTXdZeUlzSW5OMVlpSTZJbk41YzNSbGJUcHpaWEoyYVdObFlXTmpiM1Z1ZERwMGIyOXNjenB6WVMxMGIyOXNjeUo5LnFKWWtZTE1sbmV4RWdIQnNCVzNJM09XdEJlb0JubGpENS1mcl9udjVDMEJ0YUZFS1RqU3l2YlNGa1JfbmttYklkd2lYUTlzbWNncm0yQ05QRkRWa2xpNmQxNkRhdExwMXctQzMxR0NIc3lSZC0yVEVOWGtPNkVOZWlVZV9nMkRVOTFrNXV2aUhrbjVfcXczMEljbm5mZjhOVTBQWFNEMUlXa0tMQVMwMHRfNzhMQkRoNGxNRzZVSEtIMG4tWFRpblFKeEZUODBwRzJINDZhbG0za2pZaEJ0UGxBWnNsSjNvLTFwR29vXy1keFZLeV91VHFidDE0dDBiZFlKQW1MV3dLcTlKaGxBcWs5cUNRLWZ6R09mRTY3VEZHWkg0TDMyZVl5NmZqQVVRbUFQVkF2YXB3VzctUjRQUW1uRS03TGJYRTlFb1RlREMyTTJQM1J1eno4clpDQQ==
+---
 # Source: harvester-cloud-provider/charts/kube-vip/templates/rbac.yaml
 apiVersion: v1
 kind: ServiceAccount
@@ -197,14 +207,19 @@ spec:
           image: rancher/harvester-cloud-provider:v0.2.2
           imagePullPolicy: IfNotPresent
           args:
-            - --cloud-config=/var/kubernetes/cloud-config
+            - --cloud-config=/etc/kubernetes/cloud-config
           command:
             - harvester-cloud-provider
           resources:
             {}
+          # volumeMounts:
+          #   - mountPath: /etc/kubernetes/cloud-config
+          #     name: cloud-config
           volumeMounts:
-            - mountPath: /var/kubernetes/cloud-config
-              name: cloud-config
+            - name: cloud-config
+              mountPath: /etc/kubernetes/cloud-config
+              subPath: cloud-config
+              readOnly: true              
       nodeSelector:
         kubernetes.io/os: linux
       affinity:
@@ -232,8 +247,14 @@ spec:
           key: cattle.io/os
           operator: Equal
           value: linux
+      # volumes:
+      #   - name: cloud-config
+      #     hostPath:
+      #       path: /etc/kubernetes/cloud-config
+      #       type: File
       volumes:
         - name: cloud-config
-          hostPath:
-            path: /var/kubernetes/cloud-config
-            type: File
+          secret:
+            secretName: harvester-cloud-config
+
+
