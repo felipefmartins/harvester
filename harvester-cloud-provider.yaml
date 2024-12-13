@@ -197,13 +197,13 @@ spec:
           image: rancher/harvester-cloud-provider:v0.2.2
           imagePullPolicy: IfNotPresent
           args:
-            - --cloud-config=/etc/kubernetes/cloud-config
+            - --cloud-config=/var/kubernetes/cloud-config
           command:
             - harvester-cloud-provider
           resources:
             {}
           volumeMounts:
-            - mountPath: /etc/kubernetes/cloud-config
+            - mountPath: /var/kubernetes/cloud-config
               name: cloud-config
       nodeSelector:
         kubernetes.io/os: linux
@@ -235,5 +235,5 @@ spec:
       volumes:
         - name: cloud-config
           hostPath:
-            path: /etc/kubernetes/cloud-config
+            path: /var/kubernetes/cloud-config
             type: File
